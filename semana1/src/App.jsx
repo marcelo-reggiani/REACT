@@ -2,17 +2,22 @@
 
 // IMPORTAR O COMPONENTE 
 import Titulo from "./components/Titulo";
-import Mensagem from "./components/Mensagem";
+import Titulo2 from "./components/Titulo2.jsx";
+import Rodape from "./components/Rodape";
+import Blog from "./components/Blog"
 
 // App()  É o componente principal da Aplicação
 function App() {
     return (
         <main>
             <Titulo></Titulo>
-            <Mensagem></Mensagem>
-            <Mensagem></Mensagem>
-            <Mensagem></Mensagem>
+            <br />
+            <Titulo2></Titulo2>
+            <br />
+            <Blog></Blog>
+            <Rodape></Rodape>
         </main>
+        
     );
 }
 export default App;

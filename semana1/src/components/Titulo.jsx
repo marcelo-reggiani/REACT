@@ -6,7 +6,7 @@
 function Titulo() {
     // o Conteudo do Return é o visual
     return (
-    <h2>Frases do Dia</h2>  
+        <h2>Postagens- Exercicio 1</h2>  
     );
 }
 // Disponibiliza o componente para ser usado em outros arquivos do projeto. Para isso precisa exportar

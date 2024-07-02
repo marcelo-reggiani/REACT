@@ -1,0 +1,22 @@
+.postagem-titulo {
+    color: brown;
+  }
+  
+  .paragrafo {
+    font-style: italic;
+    text-align: center;
+    margin: 8px;
+    padding: 8px;
+  }
+  
+  .postagem-corpo {
+    background-color: white;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    margin: 8px auto;
+  }
+  .postagem-imagem {
+    margin: auto;
+  }

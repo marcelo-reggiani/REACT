@@ -1,0 +1,16 @@
+.mensagem-titulo {
+    color: brown;
+  }
+  
+  .paragrafo {
+    font-style: italic;
+  }
+  
+  .mensagem-corpo {
+    background-color: white;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    margin: 8px auto;
+  }

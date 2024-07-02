@@ -1,18 +1,18 @@
 // App.jsx = jsx ⇒ JavaScript Extend.  Permite escrever codigo HTML dentro do JS
 
+// IMPORTAR O COMPONENTE 
+import Titulo from "./components/Titulo";
+import Mensagem from "./components/Mensagem";
+
 // App()  É o componente principal da Aplicação
 function App() {
-    const nome = "Soulcode";
     return (
-        <div>
-            <h1>React</h1>
-            <p>Olá, {nome.toUpperCase()}</p>
-            <img src="https://picsum.photos/200" alt="foto aleatória" />
-            <br />
-            <br />
-            <button>Clique Aqui</button>
-            <p>Soma: 20 * 5 = {20 * 5}</p>
-        </div>
+        <main>
+            <Titulo></Titulo>
+            <Mensagem></Mensagem>
+            <Mensagem></Mensagem>
+            <Mensagem></Mensagem>
+        </main>
     );
 }
 export default App;

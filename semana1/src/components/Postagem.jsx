@@ -1,20 +1,14 @@
-import "./Postagem.css"
+import "./Postagem.css";
 
-function Postagem() {
-    const textoTitulo = "Primeiro Exercicio React";
-    const nomeAutor = "Marcelo Reggiani";
-    const linkImagem = "https://picsum.photos/200";
-
+// props => são os atributos que definimos no uso do Postagem
+function Postagem(props) {
     return (
-        <section className="postagem-corpo">
-            <h2 className="postagem-titulo">{textoTitulo}</h2>
-            <p className="paragrafo">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, aliquid.
-            </p>
-            <img className="postagem-imagem" src={linkImagem} alt="Imagem da mensagem" />
-            <br />
-            <small>Postado por: {nomeAutor}</small>            
-        </section>
+        <article className="postagem">
+            <h3>{props.titulo}</h3>
+            <p>{props.desc}</p>
+            <img src={props.linkImagem} alt={props.legenda}/>
+        </article>
     );
 }
+
 export default Postagem;

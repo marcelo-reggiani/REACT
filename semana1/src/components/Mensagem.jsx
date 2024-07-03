@@ -1,20 +1,23 @@
-// IMPORTAR Para que os estilos do arquivo façam parte do projeto
-import "./Mensagem.css"
+// Importante: importar para que os estilos do arquivo
+// façam parte do projeto
+import "./Mensagem.css";
 
-function Mensagem() {
-    const textoTitulo = "As batatas quando nascem se esparramam pelo chão";
-    const nomeAutor = "j. Almir";
-    const linkImagem = "https://picsum.photos/200";
-
+function Mensagem(props) {
     return (
+        <>
         <section className="mensagem-corpo">
-            <h2 className="mensagem-titulo">{textoTitulo}</h2>
-            <img src={linkImagem} alt="Imagem da mensagem" />
-            <p className="paragrafo">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, aliquid.
-            </p>
-            <small>Criado por: {nomeAutor}</small>
+            <h2>{props.textoTitulo}</h2>
+            <img src={props.linkImagem} alt={props.legenda}/>
+            <p>{props.paragrafo}</p>
+            <small>Criado por: {props.nomeAutor}</small>
         </section>
+        </>
     );
 }
+
 export default Mensagem;
+
+// Exercício: Aplicar props ao componente Mensagem, as propriedades são: 
+// textoTitulo, nomeAutor, paragrafo e linkImagem. 
+// Adapte o componente para receber props.
+// Até 12h

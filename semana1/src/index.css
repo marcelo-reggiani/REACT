@@ -1,23 +1,19 @@
-/* Estilos Globais = Reset, Fonts */
-
+/* Estilos globais */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #efefef;
-  font-size: monospace;
+    background-color: #efefef;
+    font-family: monospace;
 }
 
 img {
-  border-radius: 10px;
-}
-h1 {
-  text-align: center;
+    border-radius: 8px;
 }
 
-h2 {
-  text-align: center;
+h1 {
+    text-align: center;
 }

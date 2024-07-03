@@ -1,16 +1,4 @@
-.rodape-corpo {
-    background-color: white;
-    padding: 6px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    width: auto;
-    margin: 6px auto;
-}
-
-.rodape {
-    text-align: center;
-    color: blue;
-    margin: auto;
-    padding: 10px;
+footer {
     font-style: italic;
-  }
+    background-color: grey;
+}

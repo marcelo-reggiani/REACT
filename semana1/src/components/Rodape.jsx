@@ -1,11 +1,17 @@
-import "./Rodape.css"
+import "./Rodape.css";
 
 function Rodape() {
-    // o Conteudo do Return é o visual
+    // Fragment: <>
+    // Utilizamos o fragment para agrupar
+    // elementos filhos
     return (
-     <section className="rodape-corpo">
-        <h2 className="rodape">&copy; 2024 Curso React Soulcode. Todos os direitos reservados.</h2>
-     </section>   
+        <>
+            <hr/>
+            <footer>
+                © 2015-2024 SoulCode. Todos os direitos reservados.
+            </footer>
+        </>
     );
 }
+
 export default Rodape;

@@ -6,9 +6,9 @@ function Mensagem(props) {
     return (
         <>
         <section className="mensagem-corpo">
-            <h2>{props.textoTitulo}</h2>
+            <h2 className="mensagem-titulo">{props.textoTitulo.toUpperCase()}</h2>
             <img src={props.linkImagem} alt={props.legenda}/>
-            <p>{props.paragrafo}</p>
+            <p className="paragrafo">{props.paragrafo}</p>
             <small>Criado por: {props.nomeAutor}</small>
         </section>
         </>

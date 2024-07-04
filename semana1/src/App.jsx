@@ -10,6 +10,7 @@ import Mensagem from "./components/Mensagem"
 import Navbar from "./components/Navbar";
 import Listagem from "./components/Listagem";
 import CardAluno from "./components/CardAluno";
+import Banner from "./components/Banner";
 
 // Componente principal da aplicação
 function App() {
@@ -20,9 +21,9 @@ function App() {
             {/* <Mensagem textoTitulo="Primeira Mensagem" paragrafo="Esse paragrafo é referente a Primeira mensagem" linkImagem="https://picsum.photos/200" legenda="Imagem aleatória" nomeAutor="Marcelo Reggiani"/>
             <Mensagem textoTitulo="Segunda Mensagem" paragrafo="Esse paragrafo é referente a Segunda mensagem" linkImagem="https://picsum.photos/200" legenda="Imagem aleatória" nomeAutor="Soly Reggiani"/> */}
             {/* <Rodape/> */}
-
-            <Listagem />
-            <CardAluno />
+            {/* <Listagem />
+            <CardAluno /> */}
+            <Banner />
         </>
     );
 }

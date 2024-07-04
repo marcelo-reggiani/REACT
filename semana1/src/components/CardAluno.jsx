@@ -1,4 +1,3 @@
-
 import "./CardAluno.css";
 
 const alunos = [
@@ -10,13 +9,7 @@ const alunos = [
 
 function CardAluno(props) {
     const cardAluno = alunos.map((aluno) => {
-    return (
-        <article key={aluno.matricula}>
-        <h3>NOME: {aluno.nome}</h3>
-        <p>SÉRIE: {aluno.serie}</p>
-        <p>MÉDIA: {aluno.media}</p>
-    </article>
-        );
+        return <CardAluno key={aluno.matricula} nome={aluno.nome} serie={aluno.serie} media={aluno.media} />
     });
     return (
         <>

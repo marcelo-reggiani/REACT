@@ -1,4 +1,5 @@
 import "./CardAluno.css";
+
 function CardAluno(props) {
     const classe = props.media >= 7 ? "aprovado" : "reprovado";
     return (

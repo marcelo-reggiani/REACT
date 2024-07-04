@@ -9,6 +9,7 @@ import Blog from "./components/Blog";
 import Mensagem from "./components/Mensagem"
 import Navbar from "./components/Navbar";
 import Listagem from "./components/Listagem";
+import CardAluno from "./components/CardAluno";
 
 // Componente principal da aplicação
 function App() {
@@ -21,6 +22,7 @@ function App() {
             {/* <Rodape/> */}
 
             <Listagem />
+            <CardAluno />
         </>
     );
 }

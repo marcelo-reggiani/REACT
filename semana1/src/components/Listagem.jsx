@@ -22,7 +22,7 @@ function Listagem() {
                 <p>PREÇO UNITÀRIO: {produto.precoUnitario}</p>
                 <p>QUANTIDADE: {produto.quantidade}</p>
                 <p>SUBTOTAL: {produto.quantidade * produto.precoUnitario}</p>
-                </article>
+            </article>
         );
     });
 

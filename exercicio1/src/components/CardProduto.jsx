@@ -7,7 +7,7 @@ function Carrinho(props) {
             {props.desconto > 0 && <p className="grfado">{props.precoUnitario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</p>}
             <div className="price">
             {props.desconto > 0 ? <h4>{valorDesconto.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h4> : <h4>{props.precoUnitario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h4>}
-            {props.desconto > 0 && <p className="desconto">{props.desconto.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}% OFF</p>}
+            {props.desconto > 0 && <p className="desconto">{props.desconto}% OFF</p>}
             </div>
         </article>
     );

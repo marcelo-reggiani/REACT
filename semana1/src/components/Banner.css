@@ -1,0 +1,14 @@
+.teste {
+    height: 200px;
+    width: 200px;
+}
+
+.fundo-imagem {
+    height: 200px;
+    width: 200px;
+    background: url(/images/banner.jpg);
+    background-color: rgb(143, 143, 184);
+    background-size: cover;
+    background-position: center;
+
+}

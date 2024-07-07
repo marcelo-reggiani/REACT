@@ -1,0 +1,16 @@
+  .galeria {
+    padding: 2rem;
+    background-color: #f1f1f1;
+  }
+  
+  .galeria h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }

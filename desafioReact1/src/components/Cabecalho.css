@@ -1,0 +1,41 @@
+.cabecalho {
+    padding: 1rem;
+    background-color: #4b4949;
+    color: white;
+  }
+
+  .cabecalho p {
+    margin-top: 1rem;
+    margin-left: 100px;
+  }
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: flex;
+    margin-right: 100px;
+    justify-content: flex-end;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+
+  
+  button {
+    margin-left: 100px;
+    background-color: #0c6e10;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }  

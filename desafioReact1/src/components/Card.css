@@ -1,0 +1,16 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .card-imagem {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }

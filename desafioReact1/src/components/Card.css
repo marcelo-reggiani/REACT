@@ -10,7 +10,7 @@
   }
   
   .card-imagem {
-    width: 100%;
-    height: auto;
+    /* width: 80;  Perguntar para o prof quando eu preencho com 80px ele destorce a imagem. e quando deixo 80 sem nada ou até mesmo comento ele mostra a iamgem corrreta */  
+    height: 100px;
     margin-bottom: 1rem;
   }

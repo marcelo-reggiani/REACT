@@ -1,4 +1,5 @@
 import "./Cabecalho.css";
+import logo from '../assets/Ms.png';
 
 function Cabecalho(props) {
   const handleEntrarClick = () => {
@@ -8,10 +9,8 @@ function Cabecalho(props) {
   return (
     <header className="cabecalho">
       <hr />
-      <article className="logo">
-        <img src='./assets/Ms.png' alt="Logo" />
-      </article>
-      <p>{props.logado ? `Bem-vindo(a)! ${props.nomeUsuario}` : "Você está desconectado"}</p>
+      <img src={logo} alt="Logo" className="logo" />
+      <p className="status-login">{props.logado ? `Bem-vindo(a)! ${props.nomeUsuario}` : "Você está desconectado"}</p>
       <nav className="navbar">
         <ul>
           <li><a href="#">Home</a></li>

@@ -1,41 +1,59 @@
 .cabecalho {
-    padding: 1rem;
-    background-color: #4b4949;
-    color: white;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  background-color: #4b4949;
+  color: white;
+}
 
-  .cabecalho p {
-    margin-top: 1rem;
-    margin-left: 100px;
-  }
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .navbar li {
-    display: flex;
-    margin-right: 100px;
-    justify-content: flex-end;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
 
-  
-  button {
-    margin-left: 100px;
-    background-color: #0c6e10;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }  
+.status-login {
+  flex: 1;
+  text-align: start;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar li {
+  display: flex;
+  margin-right: 100px;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  position: absolute;
+  left: 350px;
+  background-color: #0c6e10;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}  

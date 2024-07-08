@@ -11,6 +11,14 @@ import Navbar from "./components/Navbar";
 import Listagem from "./components/Listagem";
 import CardAluno from "./components/CardAluno";
 import Banner from "./components/Banner";
+import Eventos from "./components/Eventos"
+import Contador from "./components/Contador";
+import Abas from "./components/Abas";
+import Carrossel from "./components/Carrossel";
+import CalculadoraIMC from "./components/CalculadoraIMC";
+import ConversorTemperatura from "./components/ConversorTemperatura";
+import Post from "./components/Post";
+
 
 // Componente principal da aplicação
 function App() {
@@ -23,7 +31,16 @@ function App() {
             {/* <Rodape/> */}
             {/* <Listagem />
             <CardAluno /> */}
-            <Banner />
+            {/* <Banner /> */}
+            {/* <Eventos /> */}
+            {/* <Contador valorInicial={1000}/>
+            <Contador /> */}
+            {/* <Abas />  //Cria abas dentro do componete abas*/ }
+            {/* <Carrossel /> */}
+            {/* <CalculadoraIMC /> */}
+            <ConversorTemperatura />
+            <br /><hr />
+            <Post />
         </>
     );
 }

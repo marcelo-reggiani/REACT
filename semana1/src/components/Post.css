@@ -1,0 +1,10 @@
+.ativo {
+    font-weight: bold;
+    background-color: green;
+    color: white;
+}
+.inativo {
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}

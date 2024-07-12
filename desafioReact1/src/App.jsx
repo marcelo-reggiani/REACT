@@ -6,7 +6,7 @@ import Rodape from "./components/Rodape";
 function App() {
   return (
       <>
-        <Cabecalho logado={false} nomeUsuario="Marcelo" />
+        <Cabecalho logado={true} nomeUsuario="Marcelo" />
         <Banner />
         <Galeria />
         <Rodape />

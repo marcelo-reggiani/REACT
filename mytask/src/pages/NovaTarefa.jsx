@@ -23,7 +23,8 @@ function NovaTarefa() {
 
   return (
     <main>
-      <form className="form-section" onSubmit={handleSubmit(salvarTarefa)}>
+      <form className="form-section mt-5" onSubmit={handleSubmit(salvarTarefa)}>
+        <br />
         <h1>Adicionar tarefa</h1>
         <hr />
         <div>

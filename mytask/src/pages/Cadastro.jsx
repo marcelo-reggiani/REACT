@@ -11,7 +11,8 @@ function Cadastro() {
 
   return (
     <main>
-      <form className="form-section" onSubmit={handleSubmit(cadastrar)}>
+      <form className="form-section mt-5" onSubmit={handleSubmit(cadastrar)}>
+        <br />
         <h1>Cadastro</h1>
         <hr />
         <div>

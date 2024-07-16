@@ -9,7 +9,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 function Menu() {
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="sm"> 
+            <Navbar bg="dark" variant="dark" expand="sm" className="menu fixed-top"> 
                 <Container fluid>
                     <Link to="/">
                         <img src="https://cdn.pixabay.com/photo/2017/09/29/00/30/checkmark-icon-2797531_640.png" width="32" />

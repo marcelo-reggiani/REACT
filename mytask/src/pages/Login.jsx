@@ -11,7 +11,8 @@ function Login() {
 
   return (
     <main>
-      <form className="form-section" onSubmit={handleSubmit(entrar)}>
+      <form className="form-section mt-5" onSubmit={handleSubmit(entrar)}>
+        <br />
         <h1>Login</h1>
         <hr />
         <div>

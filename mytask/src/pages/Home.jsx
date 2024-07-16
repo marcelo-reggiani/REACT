@@ -6,7 +6,7 @@ import img4 from "../assets/img4.jpg";
 
 function Home() {
   return (
-    <main  className="mt-3">
+    <main  className="mt-5">
       <h1>Home</h1>
       <Container>
         <Row>

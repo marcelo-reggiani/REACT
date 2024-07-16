@@ -2,7 +2,7 @@ import {Container, Accordion, Button, Alert} from "react-bootstrap"
 
 function PoliticaPrivacidade() {
     return ( 
-        <main className="mt-3">
+        <main className="mt-5">
             <Container>
                 <h1>Politicas de Privacidade</h1>
                 <hr />

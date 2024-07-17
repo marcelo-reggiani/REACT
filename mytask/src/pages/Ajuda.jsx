@@ -2,9 +2,8 @@ import {Container, Accordion, Button, Alert} from "react-bootstrap"
 
 function Ajuda() {
     return ( 
-        <main className="mt-3">
-            <Container className="mt-5">
-                <br />
+        <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+            <Container>
                 <h1>Ajuda</h1>
                 <hr />
                 <Accordion defaultActiveKey="0">

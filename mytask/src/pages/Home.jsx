@@ -6,9 +6,9 @@ import img4 from "../assets/img4.jpg";
 
 function Home() {
   return (
-    <main  className="mt-5">
-      <h1>Home</h1>
+    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
       <Container>
+      <h1>Home</h1>
         <Row>
           <Col md={4}>
             <Card className="mt-3">

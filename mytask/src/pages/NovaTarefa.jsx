@@ -22,9 +22,8 @@ function NovaTarefa() {
   }
 
   return (
-    <main>
-      <form className="form-section mt-5" onSubmit={handleSubmit(salvarTarefa)}>
-        <br />
+    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+      <form className="form-section" onSubmit={handleSubmit(salvarTarefa)}>
         <h1>Adicionar tarefa</h1>
         <hr />
         <div>

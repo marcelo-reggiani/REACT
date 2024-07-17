@@ -4,9 +4,11 @@ import { deleteTarefa, getTarefas } from "../firebase/tarefas";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import toast from "react-hot-toast";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Tarefas() {
   const [tarefas, setTarefas] = useState(null);
+  const navigate = useNavigate()
 
   function carregarDados() {
     // O then devolve a lista de tarefas da coleção
@@ -33,9 +35,8 @@ function Tarefas() {
   }, []);
 
   return (
-    <main>
-      <Container className="mt-5">
-        <br />
+    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+      <Container>
         <h1>Suas tarefas</h1>
         <hr />
         {/* Usando o classname transforma o link como um botao no bootstrap */}
@@ -51,11 +52,11 @@ function Tarefas() {
                     <Card.Title>{tarefa.titulo}</Card.Title>
                     <Card.Text>{tarefa.descricao}</Card.Text>
                     <div className="mb-2">
-                      {tarefa.concluido ? (<Badge bg="success">Concluído</Badge>) : (<Badge bg="warning">Pendente</Badge>)}
-                      <Badge>{tarefa.categoria}</Badge>
-                      <Badge bg="dark">{new Date(tarefa.dataConclusao).toLocaleDateString()}</Badge>
+                      {tarefa.concluido ? (<Badge className="m-2" bg="success">Concluído</Badge>) : (<Badge className="m-2" bg="warning">Pendente</Badge>)}
+                      <Badge className="m-2">{tarefa.categoria}</Badge><br />
+                      <Badge className="m-2" bg="dark">Conclusão: {new Date(tarefa.dataConclusao).toLocaleDateString()}</Badge>
                     </div>
-                    <Button variant="dark">Editar</Button>
+                    <Button className="m-1" variant="dark" onClick={() => {navigate(`/tarefas/editar/${tarefa.id}`)}}>Editar</Button>
                     <Button variant="danger" onClick={() => deletarTarefa(tarefa.id)}>Excluir</Button>
                   </Card.Body>
                 </Card>

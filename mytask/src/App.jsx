@@ -10,6 +10,7 @@ import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import NovaTarefa from "./pages/NovaTarefa";
 import Tarefas from "./pages/Tarefas";
 import {Toaster} from "react-hot-toast";
+import EditarTarefa from "./pages/EditarTarefa";
 
 
 // BrowserRouter: Componente essencial pra conduzir o roteamento do navegador
@@ -27,11 +28,12 @@ function App() {
           <Route path="/ajuda" element={<Ajuda />}/>
           <Route path="/tarefas" element={<Tarefas />} />
           <Route path="/tarefas/adicionar" element={<NovaTarefa/>} />
+          <Route path="/tarefas/editar/:id" element={<EditarTarefa />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <Menu />  Se o menu estiver abaixo da routes.  Afeta a exibição da pagina. Fica com o menu abaixo e o conteudo acima.*/}  
       </BrowserRouter>
-      <Toaster position="bottom-rigth" />
+      <Toaster position="bottom-right" />
       <br />
       <hr />
       <Rodape />

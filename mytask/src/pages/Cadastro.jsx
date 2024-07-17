@@ -1,18 +1,31 @@
 import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { cadastrarUsuario } from "../firebase/auth";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { entrarGoogle } from "../firebase/auth";
 
 function Cadastro() {
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const navigate = useNavigate()
 
   function cadastrar(data) {
-    console.log("Cadastro!");
-    console.log(data);
+    cadastrarUsuario(data.nome, data.email, data.senha).then(() => {
+      toast.success(`Bem vindo(a)! ${data.nome}`)
+      navigate("/tarefas")
+    }) .catch(() => toast.error("Ocorreu um erro!")) 
+  }
+
+  function handleEntrarGoogle(){
+    entrarGoogle().then(() => { 
+      toast.success(`Bem-Vindo(a)!`)
+      navigate("/tarefas")
+    })
   }
 
   return (
-    <main>
-      <form className="form-section mt-5" onSubmit={handleSubmit(cadastrar)}>
-        <br />
+    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+      <form className="form-section" onSubmit={handleSubmit(cadastrar)}>
         <h1>Cadastro</h1>
         <hr />
         <div>
@@ -48,7 +61,7 @@ function Cadastro() {
         <Button variant="dark" className="mt-1 w-100" type="submit">
           Cadastrar
         </Button>
-        <Button variant="danger" className="mt-1 w-100" type="button">
+        <Button onClick={handleEntrarGoogle} variant="danger" className="mt-1 w-100" type="button">
           Entrar com o Google
         </Button>
       </form>

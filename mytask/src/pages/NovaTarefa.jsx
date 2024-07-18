@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { addTarefa } from "../firebase/tarefas"
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UsuarioContext } from "../contexts/UsuarioContext";
+import { Navigate } from "react-router-dom";
 
 function NovaTarefa() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -10,6 +13,8 @@ function NovaTarefa() {
   const navigate = useNavigate()
 
   function salvarTarefa(data) {
+    // Novo campo no documento que associa o usuario a tarefa que ele criou
+    data.idUsuario= usuario.uid;
     // Os dados do formulario são passados para a função de inserir
     // Then => Aguarda a inserção da tarefa para então exibir o toats
     addTarefa(data).then(() => {
@@ -21,8 +26,16 @@ function NovaTarefa() {
     });
   }
 
+    // Recuperamos a informação do usuario (se esta logado ou não)
+  const usuario = useContext(UsuarioContext);
+
+    // Se o usuário não estiver logado.  Vai ser encaminhado para outra pagina
+    if(usuario === null) {
+      return <Navigate to="/login" />
+    }
+
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <form className="form-section" onSubmit={handleSubmit(salvarTarefa)}>
         <h1>Adicionar tarefa</h1>
         <hr />

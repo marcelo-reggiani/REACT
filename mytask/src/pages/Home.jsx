@@ -6,7 +6,7 @@ import img4 from "../assets/img4.jpg";
 
 function Home() {
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <Container>
       <h1>Home</h1>
         <Row>

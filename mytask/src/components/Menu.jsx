@@ -1,20 +1,30 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Navbar, Container, Nav, Button} from "react-bootstrap";
+import { logout } from "../firebase/auth";
+import { UsuarioContext } from "../contexts/UsuarioContext";
 
 function Menu() {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false); // Criado para tentar esconder o menu hamburguer quando clicado
+
+  const usuario = useContext(UsuarioContext)
   const navigate = useNavigate();
 
-  const handleSelect = (eventKey) => {
+  const handleSelect = (eventKey) => { // Criado para tentar esconder o menu hamburguer quando clicado
     setExpanded(false); // Fecha o menu hamburguer ao selecionar um link
     navigate(eventKey); // Navega para a rota correspondente ao link clicado
   };
 
+  function handleLogout() {
+    logout().then(() => {
+      navigate("/login")
+    })
+  }
+
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="sm" fixed="top" expanded={expanded}>
+    <header> 
+      {/* fixed="top" */}
+      <Navbar bg="dark" variant="dark" expand="sm"  expanded={expanded}>
         <Container fluid>
           <Link to="/">
             <img src="https://cdn.pixabay.com/photo/2017/09/29/00/30/checkmark-icon-2797531_640.png" width="32" alt="Logo" />
@@ -23,10 +33,12 @@ function Menu() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" onSelect={handleSelect}>
               <Link className="nav-link" to="/" eventKey="/">Home</Link>
-              <Link className="nav-link" to="/tarefas" eventKey="/tarefas">Tarefas</Link>
-              <Link className="nav-link" to="/login" eventKey="/login">Login</Link>
-              <Link className="nav-link" to="/cadastro" eventKey="/cadastro">Cadastro</Link>
+              {usuario && <Link className="nav-link" to="/tarefas" eventKey="/tarefas">Tarefas</Link>}
+              {!usuario && <Link className="nav-link" to="/login" eventKey="/login">Login</Link>}
+              {!usuario && <Link className="nav-link" to="/cadastro" eventKey="/cadastro">Cadastro</Link>}
               <Link className="nav-link" to="/ajuda" eventKey="/ajuda">Ajuda</Link>
+              {usuario && <span className="text-light nav-link">Usuário: {usuario.displayName}</span>}
+              {usuario && <Button variant="outline-light" onClick={handleLogout}>Sair</Button>}
             </Nav>
           </Navbar.Collapse>
         </Container>

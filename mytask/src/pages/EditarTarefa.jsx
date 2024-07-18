@@ -1,15 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { getTarefa, updateTarefa } from "../firebase/tarefas";
+import { UsuarioContext } from "../contexts/UsuarioContext";
+
 
 function EditarTarefa() {
     //Estrair o ID na rota dinâmica
     const { id } = useParams()
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+        // Recuperamos a informação do usuario (se esta logado ou não)
+        const usuario = useContext(UsuarioContext);
 
   const navigate = useNavigate();
 
@@ -35,9 +40,14 @@ function EditarTarefa() {
   useEffect(() => {
     carregarDado();
   }, []);
+
+      // Se o usuário não estiver logado.  Vai ser encaminhado para outra pagina
+      if(usuario === null) {
+        return <Navigate to="/login" />
+      }
   
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <form className="form-section" onSubmit={handleSubmit(atualizarTarefa)}>
         <br />
         <h1>Editar tarefa</h1>

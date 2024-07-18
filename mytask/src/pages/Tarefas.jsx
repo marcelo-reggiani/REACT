@@ -1,20 +1,25 @@
 import { Badge, Card, Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { deleteTarefa, getTarefas } from "../firebase/tarefas";
-import { useEffect, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { deleteTarefa, getTarefas, getTarefasUsuario } from "../firebase/tarefas";
+import { useContext, useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
+import { UsuarioContext } from "../contexts/UsuarioContext";
 
 function Tarefas() {
   const [tarefas, setTarefas] = useState(null);
+  // Recuperamos a informação do usuario (se esta logado ou não)
+  const usuario = useContext(UsuarioContext)
   const navigate = useNavigate()
 
   function carregarDados() {
     // O then devolve a lista de tarefas da coleção
-    getTarefas().then((resultados) => {
-      setTarefas(resultados);
-    });
+    if(usuario) {
+      getTarefasUsuario(usuario.uid).then((resultados) => {
+        setTarefas(resultados);
+      });
+    }
   }
 
   function deletarTarefa(id) {
@@ -34,8 +39,13 @@ function Tarefas() {
     carregarDados();
   }, []);
 
+  // Se o usuário não estiver logado.  Vai ser encaminhado para outra pagina
+  if(usuario === null) {
+    return <Navigate to="/login" />
+  }
+
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <Container>
         <h1>Suas tarefas</h1>
         <hr />

@@ -24,7 +24,7 @@ function Cadastro() {
   }
 
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <form className="form-section" onSubmit={handleSubmit(cadastrar)}>
         <h1>Cadastro</h1>
         <hr />

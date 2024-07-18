@@ -4,7 +4,7 @@
     // Entrar com o email e senha
     // Logout
 
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "./config"
 
     export async function cadastrarUsuario(nome, email, senha) {
@@ -25,4 +25,9 @@ import { auth } from "./config"
 
     export async function loginUsuario(email, senha){
         await signInWithEmailAndPassword(auth, email, senha);
+    }
+
+    export async function logout() {
+        // Essa função serve para deslogar o usuário da aplicação
+       await signOut(auth)
     }

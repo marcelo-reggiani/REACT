@@ -28,7 +28,7 @@ function Login() {
     }
 
   return (
-    <main className="mt-3" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+    <main className="mt-3" style={{ paddingTop: "16px", paddingBottom: "56px" }}>
       <form className="form-section" onSubmit={handleSubmit(entrar)}>
         <h1>Login</h1>
         <div>
